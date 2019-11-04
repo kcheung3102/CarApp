@@ -1,24 +1,44 @@
+import java.lang.reflect.Array;
+import java.util.ArrayList;
+import java.util.Collection;
+import java.util.Collections;
+import java.util.Scanner;
+
 public class CarApp {
 
     public static void main(String[] args) {
+        Scanner input = new Scanner(System.in);
+        ArrayList<Car> cars = new ArrayList<>();
         Car car = new Car();
-        car.setStart("starting");
-        car.setAccelerating("accelerating");
-        car.setSpeed(90);
-        car.setStop("stopped");
-        car.setColor("red");
-        car.setModel("Porsche");
-        car.displayVehicle();
-
         Car car2 = new Car();
-        car2.setStart("starting");
-        car2.setAccelerating("accelerating");
-        car2.setSpeed(90);
-        car2.setStop("stopped");
-        car2.setColor("red");
-        car2.setModel("Porsche");
-        car2.displayVehicle();
+
+
+        System.out.println("Enter Color: ");
+        car.setColor(input.nextLine());
+
+        System.out.println("Enter Model: ");
+        car.setModel(input.nextLine());
+
+        System.out.println("Enter Color: ");
+        car2.setColor(input.nextLine());
+
+        System.out.println("Enter Model: ");
+        car2.setModel(input.nextLine());
+
+        Collections.addAll(cars, car, car2);
+
+       for(Car carr: cars) {
+           System.out.println(carr.toString());
+       }
+
+
+
+
+
+
+
     }
+
 
 
 }

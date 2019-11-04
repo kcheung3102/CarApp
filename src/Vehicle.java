@@ -44,18 +44,45 @@ public class Vehicle {
     }
 
 
+
     public String toString() {
         return "the car is " + start + "\n" +
-                "the car is  " + accelerating + "\n" +
-                "the car is going " + speed + " mph " + "\n" +
-                "the car  is " + stop;
+                "the car is going " + speed + " mph ";
+
     }
 
-    public void displayVehicle() {
-        System.out.println(this.toString() + start);
-        System.out.println(this.toString() + accelerating);
-        System.out.println(this.toString() + "going " + speed + " mph ");
-        System.out.println(this.toString() + stop);
+    public void startVehicle() {
+        System.out.println(this.toString() + " is " + getStart());
     }
+
+    public void accelerateVehicle() {
+        System.out.println(this.toString() + " is " + getAccelerating());
+    }
+
+    public void speedVehicle() {
+        System.out.println(this.toString() + " is going " + getSpeed() + " mph ");
+    }
+
+    public void stopVehicle() {
+        System.out.println(this.toString() + " is " + getStop());
+    }
+
+    public void emissionsCheck() {
+        System.out.println(this.toString() + " has to get emissions checked");
+    }
+
+    public void emissionsPassed() {
+        System.out.println(this.toString() + " passes emissions test");
+    }
+
+    public void passingVehicle() {
+        System.out.println(this.toString() + "passes");
+    }
+
+
+
+
+
+
 
 }

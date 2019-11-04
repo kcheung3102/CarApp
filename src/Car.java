@@ -22,7 +22,7 @@ public class Car extends Vehicle {
 
     @Override
     public String toString() {
-        return "The " + color + " " + model + " is ";
+        return " The " + color + " " + model;
 
     }
 
